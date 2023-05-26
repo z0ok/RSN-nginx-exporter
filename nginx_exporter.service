@@ -8,7 +8,9 @@ Group=nginx_exporter
 Type=simple
 Restart=always
 ExecStart=/opt/nginx_exporter/nginx_exporter \
---web.listen-address=0.0.0.0:9113
+--web.listen-address=0.0.0.0:9113 \
+-nginx.ssl-verify=false \
+-nginx.scrape-uri=https://127.0.0.1:443/nginx-status
 
 [Install]
 WantedBy=multi-user.target
