@@ -1,0 +1,14 @@
+[Unit]
+Description=Nginx Exporter
+After=network.target
+
+[Service]
+User=nginx_exporter
+Group=nginx_exporter
+Type=simple
+Restart=always
+ExecStart=/opt/nginx_exporter/nginx_exporter \
+--web.listen-address=0.0.0.0:9113
+
+[Install]
+WantedBy=multi-user.target
