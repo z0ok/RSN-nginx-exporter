@@ -7,6 +7,7 @@ User=nginx_exporter
 Group=nginx_exporter
 Type=simple
 Restart=always
+RestartSec=5s
 ExecStart=/opt/nginx_exporter/nginx_exporter \
 --web.listen-address=0.0.0.0:9113 \
 -nginx.ssl-verify=false \
