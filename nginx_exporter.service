@@ -1,6 +1,7 @@
 [Unit]
 Description=Nginx Exporter
-After=network.target
+After=docker.service
+BindsTo=docker.service
 
 [Service]
 User=nginx_exporter
